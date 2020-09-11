@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:insert="~{foot::copy}">
+       <p>哈哈</p>
+    </div>
+    <div th:replace="~{foot::copy}">
+        <p>哈哈</p>
+    </div>
+    <!--保留子的标签样式-->
+    <div th:include="~{foot::copy}">
+        <p>哈哈</p>
+    </div>
+</body>
+</html>

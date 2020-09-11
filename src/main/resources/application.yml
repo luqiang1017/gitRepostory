@@ -1,0 +1,9 @@
+spring:
+  thymeleaf:
+    cache: false #禁用模板缓存
+  messages:
+    encoding: utf-8
+    basename: message_zh_CN #指定属性文件的名称
+server:
+  port: 9999
+

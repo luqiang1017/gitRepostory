@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <!-- <h1 th:text="${name}"></h1>
+
+    &lt;!&ndash;读取属性文件&ndash;&gt;
+    <h1 th:text="#{title}"></h1>
+    <h1 th:text="#{describle}"></h1>-->
+
+    <!--遍历集合-->
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>索引</th>
+        </tr>
+        <tr th:each="user,iterStat:${list}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${iterStat.count}"></td>
+        </tr>
+    </table>
+
+   <!--字符串拼接-->
+   <h3 th:text="|请问${message}aaa|"></h3>
+
+   <!--条件判断-->
+   <span th:if="${flag=='yes'}">offcn</span>
+   <span th:unless="${flag=='yes'}">unless--1</span>
+   <span th:unless="${flag=='no'}">unless--2</span></br>
+   <!--switch-->
+   <div th:switch="${a}">
+       <span th:case="${b}">y</span>
+       <span th:case="${c}">n</span>
+   </div>
+    <!--user对象-->
+   <!-- <h3 th:text="${user.id}"></h3>
+    <h3 th:text="${user.name}"></h3>
+    <h3 th:text="${map.src}"></h3>
+    <img th:src="${map.src}">-->
+</body>
+</html>
